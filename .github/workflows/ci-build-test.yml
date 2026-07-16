@@ -41,9 +41,9 @@ jobs:
           exit 1
 
       - name: Real Health Check
-        run: curl -f http://localhost:5000
+        run: curl -f http://localhost:5000f
 
-      - name: Cleanup container
+      - name: Cleanup Container
         if: always()
         run: docker stop prod-container && docker rm prod-container
 
