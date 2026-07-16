@@ -41,7 +41,7 @@ jobs:
           exit 1
 
       - name: Real Health Check
-        run: curl -f http://localhost:5000f
+        run: curl -f http://localhost:5000
 
       - name: Cleanup Container
         if: always()
