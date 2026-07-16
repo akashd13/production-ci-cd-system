@@ -33,7 +33,7 @@ jobs:
               echo "App is up!"
               exit 0
             fi
-            echo "Waiting for app..."
+            echo "Waiting for app...."
             sleep 2
           done
 
