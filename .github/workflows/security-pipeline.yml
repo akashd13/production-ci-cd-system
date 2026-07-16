@@ -28,9 +28,7 @@ jobs:
         run: echo "API_KEY=my-super-secret-key" >> $GITHUB_ENV
 
       - name: Run Container
-        run: docker run -d -p 5000:5000 \
-          -e API_KEY=$API_KEY \
-          --name prod-container cicd-secure
+        run: docker run -d -p 5000:5000 -e API_KEY=$API_KEY --name prod-container cicd-secure
 
       - name: Wait for App (Fail if not ready)
         run: |
