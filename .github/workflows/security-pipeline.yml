@@ -32,8 +32,19 @@ jobs:
           -e API_KEY=$API_KEY \
           --name secure-container cicd-secure
 
-      - name: Wait for App
-        run: sleep 5
+      - name: Wait for App (Fail if not ready)
+        run: |
+          for i in {1..10}; do
+            if curl -s http://localhost:5000; then
+              echo "App is up!"
+              exit 0
+            fi
+            echo "Waiting for app...."
+            sleep 2
+          done
+
+          echo "App failed to start"
+          exit 1
 
       # 💣 SECRET LEAK
       - name: Show Logs
