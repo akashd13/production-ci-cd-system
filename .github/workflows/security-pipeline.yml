@@ -5,7 +5,7 @@ on:
     paths:
       - '03-security-and-secrets/**'
     branches:
-      - main
+      - master
       - dev
 
 jobs:
