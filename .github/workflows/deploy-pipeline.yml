@@ -5,7 +5,7 @@ on:
     paths:
       - '04-deployment-success-but-app-down/**'
     branches:
-      - main
+      - master
       - dev
 
 jobs:
