@@ -5,7 +5,7 @@ on:
     paths:
       - '05-k8s-deployment/**'
     branches:
-      - main
+      - master
       - dev
   # Manual trigger added
   workflow_dispatch:
